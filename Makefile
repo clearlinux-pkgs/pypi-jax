@@ -1,5 +1,5 @@
 PKG_NAME := pypi-jax
-URL = https://files.pythonhosted.org/packages/80/1f/5415686c03ab01d6363f6e061fe04156687434a066a439a212b43e26f6d8/jax-0.3.1.tar.gz
+URL = https://files.pythonhosted.org/packages/4f/5d/93932a20503f47955607c8be197bc887c44ffcb28e2f58daaa0f35352e6b/jax-0.3.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
