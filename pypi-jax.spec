@@ -4,7 +4,7 @@
 #
 Name     : pypi-jax
 Version  : 0.3.5
-Release  : 10
+Release  : 11
 URL      : https://files.pythonhosted.org/packages/33/fe/1120b6c91e38d47cfd9533e2a525ba15df494687c4a9c09ec71890046c67/jax-0.3.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/33/fe/1120b6c91e38d47cfd9533e2a525ba15df494687c4a9c09ec71890046c67/jax-0.3.5.tar.gz
 Summary  : Differentiate, compile, and transform Numpy code.
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649376681
+export SOURCE_DATE_EPOCH=1649768532
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
