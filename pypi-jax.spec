@@ -4,7 +4,7 @@
 #
 Name     : pypi-jax
 Version  : 0.3.16
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/05/5f/7f3692fd90a6d5635683cc18f5cba6da97b9ce13874b981714593fc7a4ae/jax-0.3.16.tar.gz
 Source0  : https://files.pythonhosted.org/packages/05/5f/7f3692fd90a6d5635683cc18f5cba6da97b9ce13874b981714593fc7a4ae/jax-0.3.16.tar.gz
 Summary  : Differentiate, compile, and transform Numpy code.
