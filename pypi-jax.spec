@@ -4,7 +4,7 @@
 #
 Name     : pypi-jax
 Version  : 0.4.1
-Release  : 40
+Release  : 41
 URL      : https://files.pythonhosted.org/packages/e5/aa/3adbd63fe645ee4fbc0daeba9423b21970929145bc63cbf2d813b9d150f5/jax-0.4.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e5/aa/3adbd63fe645ee4fbc0daeba9423b21970929145bc63cbf2d813b9d150f5/jax-0.4.1.tar.gz
 Summary  : Differentiate, compile, and transform Numpy code.
@@ -17,6 +17,9 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(numpy)
 BuildRequires : pypi(opt_einsum)
 BuildRequires : pypi(scipy)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 <div align="center">
@@ -65,15 +68,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671038180
+export SOURCE_DATE_EPOCH=1672283769
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
