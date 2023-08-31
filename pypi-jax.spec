@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-jax
-Version  : 0.4.14
-Release  : 54
-URL      : https://files.pythonhosted.org/packages/65/ce/e3a6e8669de6ff37b44b1f801c33c10dcdc05548ee5ded30c0327eb09c93/jax-0.4.14.tar.gz
-Source0  : https://files.pythonhosted.org/packages/65/ce/e3a6e8669de6ff37b44b1f801c33c10dcdc05548ee5ded30c0327eb09c93/jax-0.4.14.tar.gz
+Version  : 0.4.15
+Release  : 55
+URL      : https://files.pythonhosted.org/packages/a6/c4/c373ea5f69237651b72c5a351c9fca2444c9a05b7caddd700abfef23c4f7/jax-0.4.15.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a6/c4/c373ea5f69237651b72c5a351c9fca2444c9a05b7caddd700abfef23c4f7/jax-0.4.15.tar.gz
 Summary  : Differentiate, compile, and transform Numpy code.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -58,10 +58,10 @@ python3 components for the pypi-jax package.
 
 
 %prep
-%setup -q -n jax-0.4.14
-cd %{_builddir}/jax-0.4.14
+%setup -q -n jax-0.4.15
+cd %{_builddir}/jax-0.4.15
 pushd ..
-cp -a jax-0.4.14 buildavx2
+cp -a jax-0.4.15 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1690554999
+export SOURCE_DATE_EPOCH=1693441534
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
